@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
-use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -31,7 +30,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property Treatment|null       $treatment
  * @property ProfileContract|null $updater
  *
- * @method static ConsentFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Consent newModelQuery()
  * @method static Builder<static>|Consent newQuery()
  * @method static Builder<static>|Consent query()
@@ -50,6 +48,12 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent whereUserType($value)
  *
  * @property ProfileContract|null $deleter
+ * @property string|null          $ip_address
+ * @property string|null          $user_agent
+ *
+ * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Consent                         whereIpAddress($value)
+ * @method static Builder<static>|Consent                         whereUserAgent($value)
  *
  * @mixin \Eloquent
  */
@@ -61,7 +65,19 @@ class Consent extends BaseModel
 
     public $incrementing = false;
 
-    public $fillable = ['subject_id', 'treatment_id'];
+    public $fillable = [
+        'id',
+        'subject_id',
+        'treatment_id',
+        'user_id',
+        'user_type',
+        'type',
+        'accepted_at',
+        'created_by',
+        'updated_by',
+        'ip_address',
+        'user_agent',
+    ];
 
     public function treatment(): BelongsTo
     {

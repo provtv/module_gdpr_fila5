@@ -1,6 +1,43 @@
-# Roadmap for Gdpr Module
+# Gdpr Module Roadmap
+
+## Visione
+
+Modulo per la gestione della compliance GDPR: consensi, trattamenti dati, profili, eventi e cookie banner. Integrazione con User e registrazione.
+
+## Fasi di Sviluppo
+
+### Fase 1: Stabilizzazione (In Progress)
+- [x] PHPStan Level 10 Compliance
+- [x] PHPMD issues risolti
+- [ ] PHPInsights (composer.lock)
+- [ ] Test Coverage improvement
+
+### Fase 2: Funzionalità (Planned)
+- [ ] EditProfile e gestione consensi
+- [ ] Cookie banner e GdprData
+- [ ] Documentazione completa
+
+### Fase 3: Integrazione (Future)
+- [ ] Integrazione User/Register
+- [ ] Traduzioni it/en complete
+
+## Checklist Qualità
+
+- [x] PHPStan Level 10
+- [x] PHPMD compliance
+- [ ] Test coverage
+- [ ] Documentazione in docs/
+
+---
+
+## Quality Fixes Log (storico)
+
+## Configuration Standards
+- [x] `.env.testing` is a carbon copy of `.env` with `_test` suffix for database names. No module-specific variables (`NOTIFY_DB_*`) unless they exist in `.env`.
+- [x] `TestCase.php` simplified: single `module:migrate` call, no `migrate:fresh`, no force, no static `$migrated` guards.
 
 ## PHPMD Issues
+...
 
 ### LongVariable
 - [x] `app/Datas/GdprData.php:53`: Avoid excessively long variable names like `$cookie_banner_enabled`. Keep variable name length under 20. (Renamed to `$cookie_banner_on`)

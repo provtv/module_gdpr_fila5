@@ -175,7 +175,11 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
-        'database.connections.gdpr.database' => 'quaeris_data_test',
+<<<<<<< .merge_file_2lyvDW
+        'database.connections.gdpr.database' => 'healthcare_app_data_test',
+=======
+        'database.connections.gdpr.database' => 'ptvx_data_test',
+>>>>>>> .merge_file_y6Fb9B
     ]);
     
     return $app;
@@ -369,4 +373,4 @@ Remember: Good tests are the foundation of reliable software development.
 
 ---
 
-*Last updated: January 2025*
+*
