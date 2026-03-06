@@ -152,7 +152,7 @@ expect($consent->property)->toBe($value);
 
 ---
 
-*Last Updated: 2025-10-13*
+*
 *Progress: 68% complete (18 errors remaining)*
 *Module Status: Substantial progress - main model issues resolved*
 # GDPR Module - PHPStan Fixes Session 2025-10-01
@@ -278,8 +278,8 @@ Il modulo GDPR gestisce:
 ## 🔗 Collegamenti
 
 - [← GDPR Module README](./readme.md)
-- [← PHPStan Session Report](../../../docs/phpstan/filament-v4-fixes-session.md)
-- [← Root Documentation](../../../docs/index.md)
+- [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
+- [← Root Documentation](../../../../docs/index.md)
 
 ---
 
