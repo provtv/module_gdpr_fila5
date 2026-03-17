@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-uses(Modules\Gdpr\Tests\TestCase::class);
+namespace Modules\Gdpr\Tests\Unit\Actions;
+
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 use Modules\Gdpr\Actions\Registration\HandleSuccessfulRegistrationAction;
 

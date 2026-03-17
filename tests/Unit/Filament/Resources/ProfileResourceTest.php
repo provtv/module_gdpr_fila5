@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-uses(Modules\Gdpr\Tests\TestCase::class);
+namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
+
+uses(\Modules\Gdpr\Tests\TestCase::class);
 
 use Modules\Gdpr\Filament\Resources\ProfileResource;
 
